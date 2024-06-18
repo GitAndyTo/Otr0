@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wuebadas</title>
+<style>
+    body {
+        background-color: black;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        position: relative;
+        margin: 12px 0;
+    }
+
+    .form-group input {
+        padding: 8px 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: #acacac solid 2px;
+        background-color: transparent;
+        color: #eee;
+        transition: 0.15s all ease;
+        width: 300px; /* Añadido un ancho fijo para una mejor apariencia */
+    }
+
+    .form-group input:focus {
+        border-color: #eee;
+    }
+
+    .form-group input::placeholder {
+        color: #acacac;
+    }
+
+    .form-group .form-label {
+        position: absolute;
+        top: 9px;
+        left: 10px; /* Ajuste de posición para que no se superponga con el borde */
+        font-size: 18px;
+        padding: 0 5px; /* Ajuste de relleno para una mejor apariencia */
+        color: #acacac;
+        pointer-events: none;
+        transition: 0.15s all ease;
+        background-color: black;
+    }
+
+    .form-group input:focus + .form-label,
+    .form-group input:not(:placeholder-shown) + .form-label {
+        transform: translate(5px, -22px);
+        font-size: 14px;
+        color: #eee;
+    }
+</style>
+</head>
+<body>
+<section>
+    <div class="form-group">
+        <input type="text" placeholder="Tu nombre BB">
+        <label class="form-label">Tu nombre BB</label>
+    </div>
+    <div class="form-group">
+        <input type="email" placeholder="Nombre">
+        <label class="form-label">Nombre</label>
+    </div>
+</section>
+</body>
+</html>
